@@ -1,0 +1,78 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Studies\\sem3\\AiSD\\algorithms\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0BB92E-D702-4189-9D55-E52EA12BFA61}|algorithms\\algorithms.csproj|D:\\Studies\\sem3\\AiSD\\algorithms\\algorithms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3A0BB92E-D702-4189-9D55-E52EA12BFA61}|algorithms\\algorithms.csproj|solutionrelative:algorithms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0BB92E-D702-4189-9D55-E52EA12BFA61}|algorithms\\algorithms.csproj|d:\\studies\\sem3\\aisd\\algorithms\\algorithms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0BB92E-D702-4189-9D55-E52EA12BFA61}|algorithms\\algorithms.csproj|solutionrelative:algorithms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0BB92E-D702-4189-9D55-E52EA12BFA61}|algorithms\\algorithms.csproj|d:\\studies\\sem3\\aisd\\algorithms\\algorithms\\bubblesort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0BB92E-D702-4189-9D55-E52EA12BFA61}|algorithms\\algorithms.csproj|solutionrelative:algorithms\\bubblesort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BubbleSort.cs",
+              "DocumentMoniker": "D:\\Studies\\sem3\\AiSD\\algorithms\\algorithms\\BubbleSort.cs",
+              "RelativeDocumentMoniker": "algorithms\\BubbleSort.cs",
+              "ToolTip": "D:\\Studies\\sem3\\AiSD\\algorithms\\algorithms\\BubbleSort.cs",
+              "RelativeToolTip": "algorithms\\BubbleSort.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T11:44:07.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Studies\\sem3\\AiSD\\algorithms\\algorithms\\Form1.cs",
+              "RelativeDocumentMoniker": "algorithms\\Form1.cs",
+              "ToolTip": "D:\\Studies\\sem3\\AiSD\\algorithms\\algorithms\\Form1.cs",
+              "RelativeToolTip": "algorithms\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T11:02:53.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\Studies\\sem3\\AiSD\\algorithms\\algorithms\\Form1.cs",
+              "RelativeDocumentMoniker": "algorithms\\Form1.cs",
+              "ToolTip": "D:\\Studies\\sem3\\AiSD\\algorithms\\algorithms\\Form1.cs [Design]",
+              "RelativeToolTip": "algorithms\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T09:43:58.395Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
