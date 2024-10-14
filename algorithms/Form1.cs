@@ -25,7 +25,7 @@ namespace algorithms
                 return;
             }
 
-            ISortingAlgorithm alg = new BubbleSort();
+            ISortingAlgorithm alg = new InsertionSort();
             alg.Sort(ints);
             this.outputDisplay.Text = NumArrayToString(ints);
         }

@@ -1,38 +1,38 @@
 {
   "version": 3,
   "targets": {
-    "net8.0-windows7.0": {}
+    "net6.0-windows7.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net8.0-windows7.0": []
+    "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jacek\\.nuget\\packages\\": {}
+    "C:\\Users\\local\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Studies\\sem3\\AiSD\\algorithms\\algorithms\\algorithms.csproj",
+      "projectUniqueName": "D:\\174724\\data-structures-algorithms\\algorithms\\algorithms.csproj",
       "projectName": "algorithms",
-      "projectPath": "D:\\Studies\\sem3\\AiSD\\algorithms\\algorithms\\algorithms.csproj",
-      "packagesPath": "C:\\Users\\jacek\\.nuget\\packages\\",
-      "outputPath": "D:\\Studies\\sem3\\AiSD\\algorithms\\algorithms\\obj\\",
+      "projectPath": "D:\\174724\\data-structures-algorithms\\algorithms\\algorithms.csproj",
+      "packagesPath": "C:\\Users\\local\\.nuget\\packages\\",
+      "outputPath": "D:\\174724\\data-structures-algorithms\\algorithms\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jacek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\local\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0-windows"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
           "projectReferences": {}
         }
       },
@@ -40,16 +40,11 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
-      "net8.0-windows7.0": {
-        "targetAlias": "net8.0-windows",
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
         "imports": [
           "net461",
           "net462",
@@ -69,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

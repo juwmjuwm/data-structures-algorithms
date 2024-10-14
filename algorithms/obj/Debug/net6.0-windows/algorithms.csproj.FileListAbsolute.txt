@@ -1,0 +1,17 @@
+D:\174724\data-structures-algorithms\algorithms\bin\Debug\net6.0-windows\algorithms.exe
+D:\174724\data-structures-algorithms\algorithms\bin\Debug\net6.0-windows\algorithms.deps.json
+D:\174724\data-structures-algorithms\algorithms\bin\Debug\net6.0-windows\algorithms.runtimeconfig.json
+D:\174724\data-structures-algorithms\algorithms\bin\Debug\net6.0-windows\algorithms.dll
+D:\174724\data-structures-algorithms\algorithms\bin\Debug\net6.0-windows\algorithms.pdb
+D:\174724\data-structures-algorithms\algorithms\obj\Debug\net6.0-windows\algorithms.csproj.AssemblyReference.cache
+D:\174724\data-structures-algorithms\algorithms\obj\Debug\net6.0-windows\algorithms.MainForm.resources
+D:\174724\data-structures-algorithms\algorithms\obj\Debug\net6.0-windows\algorithms.csproj.GenerateResource.cache
+D:\174724\data-structures-algorithms\algorithms\obj\Debug\net6.0-windows\algorithms.GeneratedMSBuildEditorConfig.editorconfig
+D:\174724\data-structures-algorithms\algorithms\obj\Debug\net6.0-windows\algorithms.AssemblyInfoInputs.cache
+D:\174724\data-structures-algorithms\algorithms\obj\Debug\net6.0-windows\algorithms.AssemblyInfo.cs
+D:\174724\data-structures-algorithms\algorithms\obj\Debug\net6.0-windows\algorithms.csproj.CoreCompileInputs.cache
+D:\174724\data-structures-algorithms\algorithms\obj\Debug\net6.0-windows\algorithms.dll
+D:\174724\data-structures-algorithms\algorithms\obj\Debug\net6.0-windows\refint\algorithms.dll
+D:\174724\data-structures-algorithms\algorithms\obj\Debug\net6.0-windows\algorithms.pdb
+D:\174724\data-structures-algorithms\algorithms\obj\Debug\net6.0-windows\algorithms.genruntimeconfig.cache
+D:\174724\data-structures-algorithms\algorithms\obj\Debug\net6.0-windows\ref\algorithms.dll
