@@ -208,9 +208,10 @@
             algorithmComboBox.FormattingEnabled = true;
             AlgComboItem algComboItem1 = new AlgComboItem(1, "Bubble sort");
             AlgComboItem algComboItem2 = new AlgComboItem(2, "Insertion sort");
+            AlgComboItem algComboItem3 = new AlgComboItem(3, "Selection sort");
             AlgComboItem algComboItem4 = new AlgComboItem(4, "Mergesort");
             AlgComboItem algComboItem5 = new AlgComboItem(5, "Quicksort");
-            algorithmComboBox.Items.AddRange(new object[] { algComboItem1, algComboItem2, algComboItem4, algComboItem5 });
+            algorithmComboBox.Items.AddRange(new object[] { algComboItem1, algComboItem2, algComboItem3, algComboItem4, algComboItem5 });
             algorithmComboBox.Location = new Point(70, 330);
             algorithmComboBox.Name = "algorithmComboBox";
             algorithmComboBox.Size = new Size(151, 36);

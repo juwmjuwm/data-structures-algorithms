@@ -26,11 +26,11 @@ namespace algorithms
             }
         }
 
-        private void Swap(int[] data, int idx1, int idx2)
+        private void Swap(int[] array, int idx1, int idx2)
         {
-            int temp = data[idx1];
-            data[idx1] = data[idx2];
-            data[idx2] = temp;
+            int temp = array[idx1];
+            array[idx1] = array[idx2];
+            array[idx2] = temp;
         }
     }
 }
