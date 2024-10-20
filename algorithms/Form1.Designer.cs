@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            AlgComboItem algComboItem1 = new AlgComboItem();
-            AlgComboItem algComboItem3 = new AlgComboItem();
-            AlgComboItem algComboItem4 = new AlgComboItem();
-            AlgComboItem algComboItem5 = new AlgComboItem();
             dataInput = new TextBox();
             dataInputLabel = new Label();
             submitDataBtn = new Button();
@@ -210,15 +206,11 @@
             algorithmComboBox.DisplayMember = "Text";
             algorithmComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             algorithmComboBox.FormattingEnabled = true;
-            algComboItem1.Id = 1;
-            algComboItem1.Text = "Bubble sort";
-            algComboItem3.Id = 2;
-            algComboItem3.Text = "Insertion sort";
-            algComboItem4.Id = 4;
-            algComboItem4.Text = "Mergesort";
-            algComboItem5.Id = 5;
-            algComboItem5.Text = "Quicksort";
-            algorithmComboBox.Items.AddRange(new object[] { algComboItem1, algComboItem3, algComboItem4, algComboItem5 });
+            AlgComboItem algComboItem1 = new AlgComboItem(1, "Bubble sort");
+            AlgComboItem algComboItem2 = new AlgComboItem(2, "Insertion sort");
+            AlgComboItem algComboItem4 = new AlgComboItem(4, "Mergesort");
+            AlgComboItem algComboItem5 = new AlgComboItem(5, "Quicksort");
+            algorithmComboBox.Items.AddRange(new object[] { algComboItem1, algComboItem2, algComboItem4, algComboItem5 });
             algorithmComboBox.Location = new Point(70, 330);
             algorithmComboBox.Name = "algorithmComboBox";
             algorithmComboBox.Size = new Size(151, 36);

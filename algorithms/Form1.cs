@@ -51,7 +51,7 @@ namespace algorithms
             alg.Sort(sortedCopy);
             stopwatch.Stop();
             this.outputDisplay.Text = _sortingApp.DisplayData(sortedCopy);
-            this.runningTime.Text = $"{stopwatch.ElapsedTicks} system ticks";
+            this.runningTime.Text = $"{stopwatch.ElapsedMilliseconds} ms";
         }
 
         private int[] InputToNumArray(string input, string sepPattern)
