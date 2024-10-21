@@ -12,5 +12,12 @@ namespace algorithms.structures
         public Node<T> Next;
         public Node<T> Prev;
         public T Data;
+
+        public Node(T data)
+        {
+            Data = data;
+            Next = null;
+            Prev = null;
+        }
     }
 }

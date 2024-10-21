@@ -12,9 +12,13 @@ namespace algorithms.structures
         private Node<T> Tail { get; set; }
         private int Count { get; set; }
 
+
         public void AddFirst(T value)
         {
-
+            Node<T> node = new Node<T>(value);
+            this.Tail.Next = node;
+            node.Prev = this.Tail;
+            this.Count++;
         }
     }
 }
