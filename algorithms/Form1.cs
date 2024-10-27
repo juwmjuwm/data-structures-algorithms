@@ -85,7 +85,7 @@ namespace algorithms
             algDict.Add(1, new BubbleSort());
             algDict.Add(2, new InsertionSort());
             algDict.Add(3, new SelectionSort());
-            algDict.Add(4, new MergeSort2());
+            algDict.Add(4, new MergeSort());
             algDict.Add(5, new QuickSort());
             return algDict[id];
         }

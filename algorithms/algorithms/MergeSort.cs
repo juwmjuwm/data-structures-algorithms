@@ -1,68 +1,59 @@
-﻿namespace dsa.algorithms
+﻿ namespace dsa.algorithms
 {
     class MergeSort : ISortingAlgorithm
     {
 
         public void Sort(int[] data)
         {
-            int[] workingCopy = new int[data.Length];
-            ArrayCopy(data, workingCopy);
-            Split(data, 0, data.Length, workingCopy);
+            Split(data, 0, data.Length - 1);
         }
 
-        private void Split(int[] data, int start, int end, int[] cpy)
+        private void Split(int[] data, int start, int end)
         {
-            if (start < end)
+            if (start >= end)
             {
-                int mid = (start + end) / 2;
-                Split(data, start, mid, cpy);
-                Split(data, mid + 1, end, cpy);
-                Merge(data, start, mid, end, cpy);
+                return;
             }
+            int mid = (start + end) / 2;
+            Split(data, start, mid);
+            Split(data, mid + 1, end);
+            Merge(data, start, mid, end);
         }
 
-        private void Merge(int[] data, int start, int mid, int end, int[] cpy)
+        private void Merge(int[] data, int start, int mid, int end)
         {
-            ArrayCopy(data, cpy);
-
-            int i = start, j = mid, k = start;
-            while (i < mid && j < end)
+            // creating a temporary buffer
+            int[] buffer = new int[end+1];
+            int t = start;
+            while (t <= end)
             {
-                if (cpy[i] <= cpy[j])
+                buffer[t] = data[t];
+                t++;
+            }
+
+            // comparing corresponding elements in subarrays
+            int i = start, j = mid+1, k = start;
+            while (i <= mid && j <= end)
+            {
+                if (buffer[i] <= buffer[j])
                 {
-                    data[k++] = cpy[i++];
+                    data[k++] = buffer[i++];
                 }
                 else
                 {
-                    data[k++] = cpy[j++];
+                    data[k++] = buffer[j++];
                 }
             }
-            while (i < mid)
-            {
-                data[k++] = cpy[i++];
-            }
-            while (j < end)
-            {
-                data[k++] = cpy[j++];
-            }
-        }
 
-        private void ArrayCopy(int[] source, int[] target)
-        {
-            for (int i = 0; i < source.Length; i++)
+            // appending the remaining elements
+            while (i <= mid)
             {
-                target[i] = source[i];
+                data[k++] = buffer[i++];
             }
-        }
-
-        private int[] ArrayCopyNew(int[] source)
-        {
-            int[] copy = new int[source.Length];
-            for (int i = 0; i < source.Length; i++)
+            while (j <= end)
             {
-                copy[i] = source[i];
+                data[k++] = buffer[j++];
             }
-            return copy;
         }
     }
 }
