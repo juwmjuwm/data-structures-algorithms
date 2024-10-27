@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace algorithms.algorithms
+﻿namespace dsa.algorithms
 {
     internal class SelectionSort : ISortingAlgorithm
     {
         public void Sort(int[] data)
         {
-            for (int i = 0; i < data.Length-1; i++)
+            for (int i = 0; i < data.Length - 1; i++)
             {
                 int curMinIndex = i;
-                for (int j = i+1; j < data.Length; j++)
+                for (int j = i + 1; j < data.Length; j++)
                 {
                     if (data[j] < data[curMinIndex])
                     {

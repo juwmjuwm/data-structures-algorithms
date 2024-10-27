@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace algorithms
+﻿namespace dsa.algorithms
 {
     internal class MergeSort2 : ISortingAlgorithm
     {
@@ -43,7 +37,8 @@ namespace algorithms
                     combined[index] = left[i];
                     index++;
                     i++;
-                } else
+                }
+                else
                 {
                     combined[index] = right[j];
                     index++;

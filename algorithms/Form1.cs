@@ -1,4 +1,5 @@
-using algorithms.algorithms;
+using dsa;
+using dsa.algorithms;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 

@@ -1,4 +1,6 @@
-﻿namespace algorithms
+﻿using dsa;
+
+namespace algorithms
 {
     partial class MainForm
     {

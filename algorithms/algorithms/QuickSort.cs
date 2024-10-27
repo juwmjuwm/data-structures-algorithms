@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace algorithms.algorithms
+﻿namespace dsa.algorithms
 {
     internal class QuickSort : ISortingAlgorithm
     {
         public void Sort(int[] data)
         {
-            QS(data, 0, data.Length-1);
+            QS(data, 0, data.Length - 1);
         }
 
         private static void QS(int[] arr, int left, int right)
@@ -26,7 +20,7 @@ namespace algorithms.algorithms
         private static int Pivot(int[] arr, int pivotIndex, int endIndex)
         {
             int swapIndex = pivotIndex;
-            for (int i = pivotIndex+1; i <= endIndex; i++)
+            for (int i = pivotIndex + 1; i <= endIndex; i++)
             {
                 if (arr[i] < arr[pivotIndex])
                 {

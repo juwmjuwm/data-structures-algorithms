@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace algorithms.structures
+﻿namespace dsa.structures
 {
     internal class Node<T>
     {
 
-        public Node<T> Next;
-        public Node<T> Prev;
-        public T Data;
+        public Node<T>? Next { get; set; }
+        public Node<T>? Prev { get; set; }
+        public T Data { get; set; }
 
         public Node(T data)
         {

@@ -1,4 +1,4 @@
-﻿namespace algorithms
+﻿namespace dsa.algorithms
 {
     interface ISortingAlgorithm
     {

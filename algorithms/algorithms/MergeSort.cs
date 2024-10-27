@@ -1,4 +1,4 @@
-﻿namespace algorithms
+﻿namespace dsa.algorithms
 {
     class MergeSort : ISortingAlgorithm
     {
@@ -6,8 +6,8 @@
         public void Sort(int[] data)
         {
             int[] workingCopy = new int[data.Length];
-            this.ArrayCopy(data, workingCopy);
-            this.Split(data, 0, data.Length, workingCopy);
+            ArrayCopy(data, workingCopy);
+            Split(data, 0, data.Length, workingCopy);
         }
 
         private void Split(int[] data, int start, int end, int[] cpy)
@@ -16,14 +16,14 @@
             {
                 int mid = (start + end) / 2;
                 Split(data, start, mid, cpy);
-                Split(data, mid+1, end, cpy);
+                Split(data, mid + 1, end, cpy);
                 Merge(data, start, mid, end, cpy);
             }
         }
 
         private void Merge(int[] data, int start, int mid, int end, int[] cpy)
         {
-            this.ArrayCopy(data, cpy);
+            ArrayCopy(data, cpy);
 
             int i = start, j = mid, k = start;
             while (i < mid && j < end)

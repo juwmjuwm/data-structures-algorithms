@@ -1,4 +1,4 @@
-﻿namespace algorithms
+﻿namespace dsa.algorithms
 {
     class BubbleSort : ISortingAlgorithm
     {
@@ -10,9 +10,9 @@
                 swapped = false;
                 for (int i = 0; i < data.Length - 1; i++)
                 {
-                    if (data[i] > data[i+1])
+                    if (data[i] > data[i + 1])
                     {
-                        this.Swap(data, i, i+1);
+                        Swap(data, i, i + 1);
                         swapped = true;
                     }
                 }
