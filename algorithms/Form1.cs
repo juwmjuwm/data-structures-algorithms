@@ -44,7 +44,10 @@ namespace algorithms
 
         private void applyBtn_Click(object sender, EventArgs e)
         {
-            ISortingAlgorithm alg = IdToAlgorithm(((AlgComboItem)this.algorithmComboBox.SelectedItem).Id);
+            AlgComboItem selectedAlgItem = (AlgComboItem) this.algorithmComboBox.SelectedItem;
+            this.statusInfo.Text = $"Sorting with {selectedAlgItem.Text} in progress...";
+            this.statusInfo.Refresh();
+            ISortingAlgorithm alg = IdToAlgorithm(selectedAlgItem.Id);
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             int[] sortedCopy = new int[_sortingApp.Data.Length];
@@ -53,6 +56,7 @@ namespace algorithms
             stopwatch.Stop();
             this.outputDisplay.Text = _sortingApp.DisplayData(sortedCopy);
             this.runningTime.Text = $"{stopwatch.ElapsedMilliseconds} ms | {stopwatch.ElapsedTicks} ticks";
+            this.statusInfo.Text = "Sorting completed!";
         }
 
         private int[] InputToNumArray(string input, string sepPattern)

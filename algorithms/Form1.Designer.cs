@@ -30,6 +30,11 @@ namespace algorithms
         /// </summary>
         private void InitializeComponent()
         {
+            AlgComboItem algComboItem1 = new AlgComboItem();
+            AlgComboItem algComboItem2 = new AlgComboItem();
+            AlgComboItem algComboItem3 = new AlgComboItem();
+            AlgComboItem algComboItem4 = new AlgComboItem();
+            AlgComboItem algComboItem5 = new AlgComboItem();
             dataInput = new TextBox();
             dataInputLabel = new Label();
             submitDataBtn = new Button();
@@ -45,6 +50,8 @@ namespace algorithms
             timeLabel = new Label();
             runningTime = new Label();
             algorithmComboBox = new ComboBox();
+            statusLabel = new Label();
+            statusInfo = new Label();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -58,7 +65,7 @@ namespace algorithms
             dataInput.Location = new Point(4, 51);
             dataInput.Margin = new Padding(4);
             dataInput.Name = "dataInput";
-            dataInput.Size = new Size(425, 34);
+            dataInput.Size = new Size(425, 29);
             dataInput.TabIndex = 0;
             // 
             // dataInputLabel
@@ -68,7 +75,7 @@ namespace algorithms
             dataInputLabel.Location = new Point(146, 11);
             dataInputLabel.Margin = new Padding(4, 0, 4, 8);
             dataInputLabel.Name = "dataInputLabel";
-            dataInputLabel.Size = new Size(142, 28);
+            dataInputLabel.Size = new Size(115, 21);
             dataInputLabel.TabIndex = 1;
             dataInputLabel.Text = "Enter numbers:";
             // 
@@ -90,7 +97,7 @@ namespace algorithms
             inputDisplayLabel.Location = new Point(12, 238);
             inputDisplayLabel.Margin = new Padding(10, 0, 3, 0);
             inputDisplayLabel.Name = "inputDisplayLabel";
-            inputDisplayLabel.Size = new Size(172, 28);
+            inputDisplayLabel.Size = new Size(138, 21);
             inputDisplayLabel.TabIndex = 3;
             inputDisplayLabel.Text = "Input (the first 15):";
             // 
@@ -110,7 +117,7 @@ namespace algorithms
             outputDisplayLabel.AutoSize = true;
             outputDisplayLabel.Location = new Point(12, 374);
             outputDisplayLabel.Name = "outputDisplayLabel";
-            outputDisplayLabel.Size = new Size(189, 28);
+            outputDisplayLabel.Size = new Size(151, 21);
             outputDisplayLabel.TabIndex = 5;
             outputDisplayLabel.Text = "Output (the first 15):";
             // 
@@ -160,7 +167,7 @@ namespace algorithms
             generatorLabel.AutoSize = true;
             generatorLabel.Location = new Point(30, 11);
             generatorLabel.Name = "generatorLabel";
-            generatorLabel.Size = new Size(165, 28);
+            generatorLabel.Size = new Size(132, 21);
             generatorLabel.TabIndex = 1;
             generatorLabel.Text = "Generate random";
             // 
@@ -170,7 +177,7 @@ namespace algorithms
             generatorLengthPicker.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
             generatorLengthPicker.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             generatorLengthPicker.Name = "generatorLengthPicker";
-            generatorLengthPicker.Size = new Size(150, 34);
+            generatorLengthPicker.Size = new Size(150, 29);
             generatorLengthPicker.TabIndex = 0;
             generatorLengthPicker.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
@@ -187,19 +194,19 @@ namespace algorithms
             // timeLabel
             // 
             timeLabel.AutoSize = true;
-            timeLabel.Location = new Point(70, 455);
+            timeLabel.Location = new Point(407, 478);
             timeLabel.Name = "timeLabel";
-            timeLabel.Size = new Size(133, 28);
+            timeLabel.Size = new Size(107, 21);
             timeLabel.TabIndex = 9;
             timeLabel.Text = "Running time:";
             // 
             // runningTime
             // 
             runningTime.AutoSize = true;
-            runningTime.Location = new Point(84, 492);
+            runningTime.Location = new Point(407, 508);
             runningTime.MinimumSize = new Size(100, 0);
             runningTime.Name = "runningTime";
-            runningTime.Size = new Size(100, 28);
+            runningTime.Size = new Size(100, 21);
             runningTime.TabIndex = 10;
             runningTime.Text = "...";
             // 
@@ -208,23 +215,49 @@ namespace algorithms
             algorithmComboBox.DisplayMember = "Text";
             algorithmComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             algorithmComboBox.FormattingEnabled = true;
-            AlgComboItem algComboItem1 = new AlgComboItem(1, "Bubble sort");
-            AlgComboItem algComboItem2 = new AlgComboItem(2, "Insertion sort");
-            AlgComboItem algComboItem3 = new AlgComboItem(3, "Selection sort");
-            AlgComboItem algComboItem4 = new AlgComboItem(4, "Mergesort");
-            AlgComboItem algComboItem5 = new AlgComboItem(5, "Quicksort");
+            algComboItem1.Id = 1;
+            algComboItem1.Text = "Bubble sort";
+            algComboItem2.Id = 2;
+            algComboItem2.Text = "Insertion sort";
+            algComboItem3.Id = 3;
+            algComboItem3.Text = "Selection sort";
+            algComboItem4.Id = 4;
+            algComboItem4.Text = "Mergesort";
+            algComboItem5.Id = 5;
+            algComboItem5.Text = "Quicksort";
             algorithmComboBox.Items.AddRange(new object[] { algComboItem1, algComboItem2, algComboItem3, algComboItem4, algComboItem5 });
             algorithmComboBox.Location = new Point(70, 330);
             algorithmComboBox.Name = "algorithmComboBox";
-            algorithmComboBox.Size = new Size(151, 36);
+            algorithmComboBox.Size = new Size(151, 29);
             algorithmComboBox.TabIndex = 11;
             algorithmComboBox.ValueMember = "Id";
             // 
+            // statusLabel
+            // 
+            statusLabel.AutoSize = true;
+            statusLabel.Location = new Point(42, 478);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new Size(55, 21);
+            statusLabel.TabIndex = 12;
+            statusLabel.Text = "Status:";
+            // 
+            // statusInfo
+            // 
+            statusInfo.AutoSize = true;
+            statusInfo.Location = new Point(42, 508);
+            statusInfo.MinimumSize = new Size(100, 0);
+            statusInfo.Name = "statusInfo";
+            statusInfo.Size = new Size(100, 21);
+            statusInfo.TabIndex = 13;
+            statusInfo.Text = "...";
+            // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(685, 553);
+            ClientSize = new Size(685, 561);
+            Controls.Add(statusInfo);
+            Controls.Add(statusLabel);
             Controls.Add(algorithmComboBox);
             Controls.Add(runningTime);
             Controls.Add(timeLabel);
@@ -267,5 +300,7 @@ namespace algorithms
         private Label timeLabel;
         private Label runningTime;
         private ComboBox algorithmComboBox;
+        private Label statusLabel;
+        private Label statusInfo;
     }
 }
