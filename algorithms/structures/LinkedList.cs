@@ -89,9 +89,18 @@
             }
             string str = "[";
             Node<T>? cur = Head;
+            bool isFirst = true;
             while (cur != null)
             {
-                str = String.Concat(str, ", ", cur.Data);
+                if (isFirst)
+                {
+                    str = String.Concat(str, cur.Data);
+                    isFirst = false;
+                }
+                else
+                {
+                    str = String.Concat(str, ", ", cur.Data);
+                }
                 cur = cur.Next;
             }
             return String.Concat(str, "]");
