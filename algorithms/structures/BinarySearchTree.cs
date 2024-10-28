@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace dsa.structures
+﻿namespace dsa.structures
 {
-    internal class BinarySearchTree
+    internal class BinarySearchTree<T>
     {
+        Node<T>? Root { get; set; }
+
+        public void Add(T value)
+        {
+
+        }
     }
 }
