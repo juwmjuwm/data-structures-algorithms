@@ -4,7 +4,7 @@
     {
         private Node<T>? Head { get; set; }
         private Node<T>? Tail { get; set; }
-        private int Count { get; set; }
+        public int Count { get; set; }
 
         public LinkedList()
         {

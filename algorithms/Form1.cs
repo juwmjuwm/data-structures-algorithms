@@ -1,5 +1,6 @@
 using dsa;
 using dsa.algorithms;
+using dsa.structures;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
@@ -8,12 +9,14 @@ namespace algorithms
     public partial class MainForm : Form
     {
 
-        private SortingApp _sortingApp;
+        private readonly SortingApp _sortingApp;
+        private dsa.structures.LinkedList<int> _linkedList;
 
         public MainForm()
         {
             InitializeComponent();
             _sortingApp = new SortingApp();
+            _linkedList = new dsa.structures.LinkedList<int>();
         }
 
         private void SubmitDataBtn_Click(object sender, EventArgs e)
@@ -44,7 +47,7 @@ namespace algorithms
 
         private void applyBtn_Click(object sender, EventArgs e)
         {
-            AlgComboItem selectedAlgItem = (AlgComboItem) this.algorithmComboBox.SelectedItem;
+            AlgComboItem selectedAlgItem = (AlgComboItem)this.algorithmComboBox.SelectedItem;
             this.statusInfo.Text = $"Sorting with {selectedAlgItem.Text} in progress...";
             this.statusInfo.Refresh();
             ISortingAlgorithm alg = IdToAlgorithm(selectedAlgItem.Id);
@@ -92,6 +95,36 @@ namespace algorithms
             algDict.Add(4, new MergeSort());
             algDict.Add(5, new QuickSort());
             return algDict[id];
+        }
+
+        private void displayLinkedListInfo()
+        {
+            this.linkedListContents.Text = _linkedList.ToString();
+            this.linkedListLength.Text = _linkedList.Count.ToString();
+        }
+
+        private void addFirstLLBtn_Click(object sender, EventArgs e)
+        {
+            _linkedList.AddFirst((int)this.linkedListNewValue.Value);
+            displayLinkedListInfo();
+        }
+
+        private void addLastLLBtn_Click(object sender, EventArgs e)
+        {
+            _linkedList.AddLast((int)this.linkedListNewValue.Value);
+            displayLinkedListInfo();
+        }
+
+        private void removeFirstLLBtn_Click(object sender, EventArgs e)
+        {
+            _linkedList.RemoveFirst();
+            displayLinkedListInfo();
+        }
+
+        private void removeLastLLBtn_Click(object sender, EventArgs e)
+        {
+            _linkedList.RemoveLast();
+            displayLinkedListInfo();
         }
     }
 }
