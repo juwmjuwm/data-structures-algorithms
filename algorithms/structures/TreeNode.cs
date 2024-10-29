@@ -1,11 +1,11 @@
 ﻿namespace dsa.structures
 {
-    internal class TreeNode<T>
+    internal class TreeNode<T> where T : IComparable<T>
     {
         public TreeNode<T>? Parent { get; set; }
         public TreeNode<T>? LeftChild { get; set; }
         public TreeNode<T>? RightChild { get; set; }
-        T Data { get; set; }
+        public T Data { get; set; }
 
         public TreeNode(T data)
         {
