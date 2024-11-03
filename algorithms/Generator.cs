@@ -13,7 +13,7 @@ namespace algorithms
         public Random Rand
         {
             get { return _rand; }
-             set { _rand = value; }
+            set { _rand = value; }
         }
 
         public Generator()
