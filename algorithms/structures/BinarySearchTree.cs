@@ -95,7 +95,7 @@
                         curParent.RightChild = null;
                     }
                 }
-                //cur.LeftChild = cur.RightChild = cur.Parent = null;
+                cur.LeftChild = cur.RightChild = cur.Parent = null;
             }
 
             // option 2: has left child
@@ -118,7 +118,7 @@
                         cur.LeftChild.Parent = curParent;
                     }
                 }
-                //cur.LeftChild = cur.RightChild = cur.Parent = null;
+                cur.LeftChild = cur.RightChild = cur.Parent = null;
             }
 
             // option 3: has right child
@@ -141,7 +141,7 @@
                         cur.RightChild.Parent = curParent;
                     }
                 }
-                //cur.LeftChild = cur.RightChild = cur.Parent = null;
+                cur.LeftChild = cur.RightChild = cur.Parent = null;
             }
 
             // option 4: has two children
@@ -154,12 +154,20 @@
                 }
 
                 cur.Data = leftmost.Data;
-                cur.RightChild = leftmost.RightChild;
+                TreeNode<T> leftmostParent = leftmost.Parent;
+                if (leftmost.Data.CompareTo(leftmostParent.Data) < 0)
+                {
+                    leftmostParent.LeftChild = leftmost.RightChild;
+                }
+                else
+                {
+                    leftmostParent.RightChild = leftmost.RightChild;
+                }
                 if (leftmost.RightChild != null)
                 {
-                    leftmost.RightChild.Parent = curParent;
+                    leftmost.RightChild.Parent = leftmostParent;
                 }
-                //Remove(leftmost.Data, cur.RightChild);
+                leftmost.LeftChild = leftmost.RightChild = leftmost.Parent = null;
 
                 if (curParent == null)
                 {
