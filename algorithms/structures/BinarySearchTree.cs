@@ -45,16 +45,11 @@
 
         public bool Remove(T value)
         {
-            return Remove(value, Root);
-        }
-
-        public bool Remove(T value, TreeNode<T>? baseNode)
-        {
             if (Root == null)
             {
                 return false;
             }
-            TreeNode<T>? cur = baseNode;
+            TreeNode<T>? cur = Root;
             while (true)
             {
                 if (cur == null)
@@ -211,8 +206,8 @@
 
             TreeNode<T>? curParent = cur.Parent;
 
-            // option 0
-            if (cur.RightChild == null && cur.LeftChild == null)
+            // option 1: no children
+            if (cur.LeftChild == null && cur.RightChild == null)
             {
                 if (curParent == null)
                 {
@@ -229,10 +224,11 @@
                         curParent.RightChild = null;
                     }
                 }
+                cur.LeftChild = cur.RightChild = cur.Parent = null;
             }
 
-            // option 1
-            else if (cur.RightChild == null)
+            // option 2: has left child
+            else if (cur.LeftChild != null && cur.RightChild == null)
             {
                 if (curParent == null)
                 {
@@ -251,16 +247,12 @@
                         cur.LeftChild.Parent = curParent;
                     }
                 }
+                cur.LeftChild = cur.RightChild = cur.Parent = null;
             }
 
-            // option 2
-            else if (cur.RightChild.LeftChild == null)
+            // option 3: has right child
+            else if (cur.LeftChild == null && cur.RightChild != null)
             {
-                cur.RightChild.LeftChild = cur.LeftChild;
-                if (cur.LeftChild != null)
-                {
-                    cur.LeftChild.Parent = cur.RightChild;
-                }
                 if (curParent == null)
                 {
                     Root = cur.RightChild;
@@ -278,58 +270,51 @@
                         cur.RightChild.Parent = curParent;
                     }
                 }
+                cur.LeftChild = cur.RightChild = cur.Parent = null;
             }
 
-            // option 3
+            // option 4: has two children
             else
             {
-                TreeNode<T> leftmost = cur.RightChild.LeftChild;
+                TreeNode<T> leftmost = cur.RightChild;
                 while (leftmost.LeftChild != null)
                 {
                     leftmost = leftmost.LeftChild;
                 }
-                TreeNode<T> leftmostParent = leftmost.Parent;
 
-                leftmostParent.LeftChild = leftmost.RightChild;
+                TreeNode<T> leftmostParent = leftmost.Parent;
+                if (leftmost.Data.CompareTo(leftmostParent.Data) < 0)
+                {
+                    leftmostParent.LeftChild = leftmost.RightChild;
+                }
+                else
+                {
+                    leftmostParent.RightChild = leftmost.RightChild;
+                }
                 if (leftmost.RightChild != null)
                 {
                     leftmost.RightChild.Parent = leftmostParent;
                 }
+
                 leftmost.LeftChild = cur.LeftChild;
-                if (cur.LeftChild != null)
-                {
-                    cur.LeftChild.Parent = leftmost;
-                }
                 leftmost.RightChild = cur.RightChild;
-                cur.RightChild.Parent= leftmost;
+                leftmost.Parent = cur.Parent;
+                cur.LeftChild = cur.RightChild = cur.Parent = null;
+
                 if (curParent == null)
                 {
                     Root = leftmost;
                 }
-                else
-                {
-                    if (cur.Data.CompareTo(curParent.Data) < 0)
-                    {
-                        curParent.LeftChild = leftmost;
-                    }
-                    else if (cur.Data.CompareTo(curParent.Data) > 0)
-                    {
-                        curParent.RightChild = leftmost;
-                    }
-                    leftmost.Parent = curParent;
-                }
             }
 
-            // cleanup
-            cur.LeftChild = null;
-            cur.RightChild = null;
-            cur.Parent = null;
             if (Root != null)
             {
                 Root.Parent = null;
             }
             return true;
         }
+
+
 
         public List<T> DfsInOrder()
         {

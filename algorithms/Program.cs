@@ -22,9 +22,9 @@ namespace algorithms
             bst.Add(10);
             bst.Add(13);
             bst.Add(21);
-            bst.Remove(8);
-            bst.Remove(14);
-            bst.Remove(10);
+            bst.Remove2(8);
+            bst.Remove2(14);
+            bst.Remove2(10);
             //bst.Remove(7);
             //bst.Remove(15);
             //bst.Remove(21);
