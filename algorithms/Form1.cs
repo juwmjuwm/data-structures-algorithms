@@ -1,6 +1,5 @@
 using dsa;
 using dsa.algorithms;
-using dsa.structures;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
@@ -10,7 +9,7 @@ namespace algorithms
     {
 
         private readonly SortingApp _sortingApp;
-        private dsa.structures.LinkedList<int> _linkedList;
+        private dsa.structures.list.LinkedList<int> _linkedList;
 
         public MainForm()
         {

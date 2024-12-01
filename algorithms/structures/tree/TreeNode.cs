@@ -1,4 +1,4 @@
-﻿namespace dsa.structures
+﻿namespace dsa.structures.tree
 {
     internal class TreeNode<T> where T : IComparable<T>
     {

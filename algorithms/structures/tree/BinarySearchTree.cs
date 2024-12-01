@@ -1,4 +1,4 @@
-﻿namespace dsa.structures
+﻿namespace dsa.structures.tree
 {
     internal class BinarySearchTree<T> where T : IComparable<T>
     {
@@ -321,7 +321,7 @@
             return TraverseInOrder(Root, new List<T>());
         }
 
-        private List<T> TraverseInOrder(TreeNode<T> node,  List<T> list)
+        private List<T> TraverseInOrder(TreeNode<T> node, List<T> list)
         {
             if (node == null)
             {

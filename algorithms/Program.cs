@@ -1,4 +1,4 @@
-using dsa.structures;
+using dsa.structures.tree;
 
 namespace algorithms
 {

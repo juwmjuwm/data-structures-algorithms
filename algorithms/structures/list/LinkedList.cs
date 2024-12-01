@@ -1,9 +1,9 @@
-﻿namespace dsa.structures
+﻿namespace dsa.structures.list
 {
     internal class LinkedList<T>
     {
-        private Node<T>? Head { get; set; }
-        private Node<T>? Tail { get; set; }
+        private ListNode<T>? Head { get; set; }
+        private ListNode<T>? Tail { get; set; }
         public int Count { get; set; }
 
         public LinkedList()
@@ -21,7 +21,7 @@
         public void AddFirst(T value)
         {
             if (AddIfEmpty(value)) return;
-            Node<T> node = new Node<T>(value);
+            ListNode<T> node = new ListNode<T>(value);
             Head.Prev = node;
             node.Next = Head;
             Head = node;
@@ -31,7 +31,7 @@
         public void AddLast(T value)
         {
             if (AddIfEmpty(value)) return;
-            Node<T> node = new Node<T>(value);
+            ListNode<T> node = new ListNode<T>(value);
             Tail.Next = node;
             node.Prev = Tail;
             Tail = node;
@@ -40,9 +40,9 @@
 
         private bool AddIfEmpty(T value)
         {
-            if (this.IsEmpty())
+            if (IsEmpty())
             {
-                Node<T> node = new Node<T>(value);
+                ListNode<T> node = new ListNode<T>(value);
                 Head = node;
                 Tail = node;
                 Count++;
@@ -53,7 +53,7 @@
 
         public void RemoveFirst()
         {
-            if (this.IsEmpty()) return;
+            if (IsEmpty()) return;
             if (RemoveIfSingle()) return;
             Head = Head.Next;
             Head.Prev = null;
@@ -62,7 +62,7 @@
 
         public void RemoveLast()
         {
-            if (this.IsEmpty()) return;
+            if (IsEmpty()) return;
             if (RemoveIfSingle()) return;
             Tail = Tail.Prev;
             Tail.Next = null;
@@ -88,22 +88,22 @@
                 return "[]";
             }
             string str = "[";
-            Node<T>? cur = Head;
+            ListNode<T>? cur = Head;
             bool isFirst = true;
             while (cur != null)
             {
                 if (isFirst)
                 {
-                    str = String.Concat(str, cur.Data);
+                    str = string.Concat(str, cur.Data);
                     isFirst = false;
                 }
                 else
                 {
-                    str = String.Concat(str, ", ", cur.Data);
+                    str = string.Concat(str, ", ", cur.Data);
                 }
                 cur = cur.Next;
             }
-            return String.Concat(str, "]");
+            return string.Concat(str, "]");
         }
     }
 }
