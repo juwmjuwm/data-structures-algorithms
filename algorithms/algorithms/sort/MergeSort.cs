@@ -1,4 +1,4 @@
-﻿ namespace dsa.algorithms
+﻿namespace dsa.algorithms.sort
 {
     class MergeSort : ISortingAlgorithm
     {
@@ -32,7 +32,7 @@
             }
 
             // comparing corresponding elements in subarrays
-            int i = start, j = mid+1, k = start;
+            int i = start, j = mid + 1, k = start;
             while (i <= mid && j <= end)
             {
                 if (buffer[i] <= buffer[j])

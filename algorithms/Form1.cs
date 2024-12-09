@@ -1,5 +1,5 @@
 using dsa;
-using dsa.algorithms;
+using dsa.algorithms.sort;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
@@ -15,7 +15,7 @@ namespace algorithms
         {
             InitializeComponent();
             _sortingApp = new SortingApp();
-            _linkedList = new dsa.structures.LinkedList<int>();
+            _linkedList = new dsa.structures.list.LinkedList<int>();
         }
 
         private void SubmitDataBtn_Click(object sender, EventArgs e)

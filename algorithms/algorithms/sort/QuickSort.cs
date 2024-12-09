@@ -1,4 +1,4 @@
-﻿namespace dsa.algorithms
+﻿namespace dsa.algorithms.sort
 {
     internal class QuickSort : ISortingAlgorithm
     {
