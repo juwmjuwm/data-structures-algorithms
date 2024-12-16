@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace algorithms
+namespace dsa.utils
 {
     class Generator
     {
@@ -18,7 +18,7 @@ namespace algorithms
 
         public Generator()
         {
-            this.Rand = new Random();
+            Rand = new Random();
         }
 
         public int[] RandArray(int length, int min, int max)

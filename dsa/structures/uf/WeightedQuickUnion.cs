@@ -1,19 +1,19 @@
-﻿namespace dsa.algorithms.uf
+﻿namespace dsa.structures.uf
 {
-    public class UnionFind : IUnionFind
+    public class WeightedQuickUnion : IUnionFind
     {
 
         private int[] _parent;
-        private int[] _rank;
+        private int[] _size;
 
-        public UnionFind(int n)
+        public WeightedQuickUnion(int n)
         {
             _parent = new int[n];
-            _rank = new int[n];
+            _size = new int[n];
             for (int i = 0; i < n; i++)
             {
                 _parent[i] = i;
-                _rank[i] = 0;
+                _size[i] = 1;
             }
         }
 
@@ -21,7 +21,6 @@
         {
             while (p != _parent[p])
             {
-                _parent[p] = _parent[_parent[p]]; // <-- path compression
                 p = _parent[p];
             }
             return p;
@@ -35,18 +34,16 @@
             {
                 return;
             }
-            if (_rank[rootP] < _rank[rootQ])
+
+            if (_size[rootP] < _size[q])
             {
                 _parent[rootP] = rootQ;
-            }
-            else if (_rank[rootP] > _rank[rootQ])
-            {
-                _parent[rootQ] = rootP;
+                _size[rootQ] += _size[rootP];
             }
             else
             {
-                _parent[rootP] = rootQ;
-                _rank[rootQ]++;
+                _parent[rootQ] = rootP;
+                _size[rootP] += _size[rootQ];
             }
         }
     }

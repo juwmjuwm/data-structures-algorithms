@@ -1,4 +1,4 @@
-﻿namespace dsa.algorithms.uf
+﻿namespace dsa.structures.uf
 {
     public class QuickFind : IUnionFind
     {

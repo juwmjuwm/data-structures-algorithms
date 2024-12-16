@@ -1,4 +1,4 @@
-﻿using dsa;
+﻿using dsa.utils;
 
 namespace algorithms
 {

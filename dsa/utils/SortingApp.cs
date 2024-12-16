@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace algorithms
+namespace dsa.utils
 {
     class SortingApp
     {
@@ -18,7 +18,7 @@ namespace algorithms
 
         public SortingApp()
         {
-            this.Data = Array.Empty<int>();
+            Data = Array.Empty<int>();
         }
 
         public string DisplayData()
@@ -26,10 +26,10 @@ namespace algorithms
             if (Data.Length > 15)
             {
                 int[] toDisplay = new int[15];
-                Array.Copy(this.Data, toDisplay, toDisplay.Length);
+                Array.Copy(Data, toDisplay, toDisplay.Length);
                 return NumArrayToString(toDisplay);
             }
-            return NumArrayToString(this.Data);
+            return NumArrayToString(Data);
         }
 
         public string DisplayData(int[] array)

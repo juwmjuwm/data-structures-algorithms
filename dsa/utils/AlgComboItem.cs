@@ -1,4 +1,4 @@
-﻿namespace dsa
+﻿namespace dsa.utils
 {
     class AlgComboItem
     {
